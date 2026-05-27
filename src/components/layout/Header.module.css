@@ -1,0 +1,40 @@
+/* src/components/layout/Header.module.css */
+
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.title {
+  font-size: var(--font-xl);
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  font-size: var(--font-xs);
+  color: var(--gray-600);
+  margin-bottom: 0;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: var(--spacing-md);
+  }
+  
+  .title {
+    font-size: var(--font-lg);
+  }
+}

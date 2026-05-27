@@ -1,0 +1,145 @@
+/* src/app/(admin)/clientes/clientes.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.filtersRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  flex: 1;
+  min-width: 280px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem var(--spacing-md);
+  font-size: var(--font-sm);
+  font-family: inherit;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  outline: none;
+  background-color: var(--light);
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  border-color: var(--primary);
+  background-color: var(--white);
+}
+
+.filterActions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.selectFilter {
+  padding: 0.75rem var(--spacing-md);
+  font-size: var(--font-sm);
+  font-family: inherit;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--white);
+  outline: none;
+  cursor: pointer;
+}
+
+.exportBtn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: var(--white);
+  padding: 0.75rem var(--spacing-md);
+  border: none;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-sm);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+}
+
+.exportBtn:disabled {
+  background: var(--gray-200) !important;
+  color: var(--gray-400) !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+.loader {
+  text-align: center;
+  font-size: var(--font-md);
+  color: var(--gray-600);
+  padding: var(--spacing-2xl) 0;
+}
+
+/* Tabla */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  padding: 12px;
+  border-bottom: 2px solid var(--gray-200);
+  color: var(--gray-800);
+  font-size: var(--font-sm);
+  font-weight: var(--weight-bold);
+}
+
+.table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: var(--font-sm);
+  color: var(--gray-800);
+}
+
+.customerName {
+  font-weight: var(--weight-bold);
+  color: var(--dark) !important;
+}
+
+.noData {
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+  color: var(--gray-600);
+  font-size: var(--font-sm);
+}
+
+@media (max-width: 768px) {
+  .filtersRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .searchBar {
+    width: 100%;
+  }
+  
+  .filterActions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .selectFilter, .exportBtn {
+    width: 100%;
+  }
+}

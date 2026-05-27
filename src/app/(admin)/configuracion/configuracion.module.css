@@ -1,0 +1,181 @@
+/* src/app/(admin)/configuracion/configuracion.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--spacing-xl);
+}
+
+.sectionTitle {
+  font-size: var(--font-lg);
+  color: var(--dark);
+  margin-bottom: 2px;
+  font-weight: var(--weight-bold);
+}
+
+.sectionSubtitle {
+  font-size: var(--font-xs);
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-lg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
+  color: var(--gray-800);
+  text-transform: uppercase;
+}
+
+.input {
+  padding: 0.75rem var(--spacing-md);
+  font-size: var(--font-sm);
+  font-family: inherit;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--light);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  background-color: var(--white);
+}
+
+.saveBtn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: var(--white);
+  height: 48px;
+  border: none;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-sm);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Empleados */
+.employeeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.employeeRow:last-child {
+  border-bottom: none;
+}
+
+.toggleBtn {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: 1px solid transparent;
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
+  border-radius: var(--border-radius-xs);
+  cursor: pointer;
+}
+
+.toggleBtnActive {
+  background-color: var(--success-light);
+  color: var(--success);
+  border-color: rgba(20, 184, 166, 0.2);
+}
+
+.toggleBtnInactive {
+  background-color: var(--danger-light);
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+/* Catálogo Tarifario */
+.pricesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.priceName {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--dark);
+}
+
+.currencyPrefix {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-bold);
+  color: var(--gray-800);
+}
+
+.inputPrice {
+  width: 72px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-sm);
+  font-family: inherit;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-xs);
+  background-color: var(--light);
+  text-align: center;
+  outline: none;
+}
+
+.inputPrice:focus {
+  border-color: var(--primary);
+  background-color: var(--white);
+}
+
+.unitSuffix {
+  font-size: var(--font-xs);
+  color: var(--gray-600);
+  width: 32px;
+}
+
+.loader {
+  text-align: center;
+  font-size: var(--font-md);
+  color: var(--gray-600);
+  padding: var(--spacing-2xl) 0;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+}

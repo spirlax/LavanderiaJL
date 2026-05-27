@@ -1,0 +1,65 @@
+/* src/components/ui/Counter.module.css */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border: 2px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  padding: 4px;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn {
+  width: 48px;
+  height: 48px; /* Casi tamaño tap completo para no fallar */
+  border-radius: var(--border-radius-sm);
+  background-color: var(--light);
+  border: none;
+  color: var(--dark);
+  font-size: 1.5rem;
+  font-weight: var(--weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn:hover:not(:disabled) {
+  background-color: var(--gray-200);
+}
+
+.btn:disabled {
+  background-color: var(--gray-100);
+  color: var(--gray-400);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.valueDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  user-select: none;
+}
+
+.number {
+  font-size: 1.65rem;
+  font-weight: var(--weight-bold);
+  color: var(--dark);
+  line-height: 1;
+}
+
+.unit {
+  font-size: var(--font-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--gray-600);
+  margin-top: 2px;
+}

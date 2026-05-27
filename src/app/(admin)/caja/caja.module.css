@@ -1,0 +1,237 @@
+/* src/app/(admin)/caja/caja.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.controlsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.dateSelector {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.label {
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
+  color: var(--gray-800);
+  text-transform: uppercase;
+}
+
+.inputDate {
+  padding: 0.75rem var(--spacing-md);
+  font-size: var(--font-sm);
+  font-family: inherit;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  outline: none;
+  background-color: var(--light);
+  cursor: pointer;
+  width: 200px;
+  transition: all 0.2s ease;
+}
+
+.inputDate:focus {
+  border-color: var(--primary);
+  background-color: var(--white);
+}
+
+.quickInfo {
+  font-size: var(--font-sm);
+  color: var(--gray-800);
+  background-color: var(--primary-light);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--primary-glow);
+}
+
+.loader {
+  text-align: center;
+  font-size: var(--font-md);
+  color: var(--gray-600);
+  padding: var(--spacing-2xl) 0;
+}
+
+/* KPI Grid */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.kpiCard {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.kpiTitle {
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
+  color: var(--gray-600);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
+}
+
+.kpiValue {
+  font-size: 1.75rem;
+  font-weight: var(--weight-bold);
+  margin-bottom: 2px;
+}
+
+.kpiMeta {
+  font-size: 0.7rem;
+  color: var(--gray-600);
+}
+
+.sectionTitle {
+  font-size: var(--font-lg);
+  color: var(--dark);
+  margin-bottom: 2px;
+  font-weight: var(--weight-bold);
+}
+
+.sectionSubtitle {
+  font-size: var(--font-xs);
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Tabla */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  padding: 12px;
+  border-bottom: 2px solid var(--gray-200);
+  color: var(--gray-800);
+  font-size: var(--font-sm);
+  font-weight: var(--weight-bold);
+}
+
+.table td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: var(--font-sm);
+  color: var(--gray-800);
+}
+
+.cashierName {
+  font-weight: var(--weight-semibold);
+  color: var(--dark) !important;
+}
+
+.totalsRow {
+  background-color: var(--primary-light);
+  font-weight: var(--weight-bold);
+  border-top: 2px solid var(--primary);
+}
+
+.totalsRow td {
+  color: var(--primary) !important;
+}
+
+/* Cierre de Caja Form */
+.closedBanner {
+  background-color: var(--danger-light);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.closedIcon {
+  font-size: 2rem;
+}
+
+.closedBanner strong {
+  font-size: var(--font-md);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.closingForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.inputNotes {
+  width: 100%;
+  padding: 0.85rem var(--spacing-md);
+  font-size: var(--font-sm);
+  font-family: inherit;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  outline: none;
+  background-color: var(--light);
+}
+
+.inputNotes:focus {
+  border-color: var(--primary);
+  background-color: var(--white);
+}
+
+.closeBtn {
+  background: linear-gradient(135deg, var(--danger), hsl(0, 75%, 48%));
+  color: var(--white);
+  height: 52px;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-family: inherit;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-sm);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.15);
+  cursor: pointer;
+}
+
+.closeBtn:disabled {
+  background: var(--gray-200) !important;
+  color: var(--gray-400) !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .controlsRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .inputDate {
+    width: 100%;
+  }
+}

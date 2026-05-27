@@ -1,0 +1,101 @@
+/* src/components/ui/Button.module.css */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  font-weight: var(--weight-semibold);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid transparent;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.fullWidth {
+  display: flex;
+  width: 100%;
+}
+
+/* Tamaños */
+.sm {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-xs);
+  height: 36px;
+}
+
+.md {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--font-sm);
+  height: 44px;
+}
+
+.lg {
+  padding: 1rem 2rem;
+  font-size: var(--font-md);
+  height: 52px;
+}
+
+/* Variantes */
+.primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.primary:hover {
+  background: linear-gradient(135deg, var(--primary-hover), var(--primary-active));
+  box-shadow: var(--shadow-md);
+}
+
+.secondary {
+  background: linear-gradient(135deg, var(--secondary), var(--secondary-hover));
+  color: var(--white);
+}
+
+.secondary:hover {
+  background: linear-gradient(135deg, var(--secondary-hover), var(--secondary-hover));
+}
+
+.outline {
+  background-color: transparent;
+  border-color: var(--gray-200);
+  color: var(--dark);
+}
+
+.outline:hover {
+  background-color: var(--light);
+  border-color: var(--gray-400);
+}
+
+.danger {
+  background-color: var(--danger);
+  color: var(--white);
+}
+
+.danger:hover {
+  background-color: hsl(0, 80%, 48%);
+}
+
+.ghost {
+  background-color: transparent;
+  color: var(--gray-600);
+}
+
+.ghost:hover {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+/* Botón Deshabilitado */
+.btn:disabled {
+  background-color: var(--gray-200) !important;
+  color: var(--gray-400) !important;
+  border-color: transparent !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}

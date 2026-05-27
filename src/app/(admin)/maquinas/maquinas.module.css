@@ -1,0 +1,228 @@
+/* src/app/(admin)/maquinas/maquinas.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.statsCard {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.loader {
+  text-align: center;
+  font-size: var(--font-md);
+  color: var(--gray-600);
+  padding: var(--spacing-2xl) 0;
+}
+
+/* Grilla de Máquinas */
+.machinesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.machineCard {
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  min-height: 260px;
+}
+
+.machineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--gray-100);
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.machineName {
+  font-size: var(--font-md);
+  font-weight: var(--weight-bold);
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+
+.machineSub {
+  font-size: var(--font-xs);
+  color: var(--gray-600);
+}
+
+.machineBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-sm);
+  color: var(--gray-800);
+}
+
+.statusNoteArea {
+  margin-top: var(--spacing-sm);
+  background-color: var(--light);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-xs);
+  font-size: var(--font-xs);
+  color: var(--gray-800);
+}
+
+.editBtn {
+  width: 100%;
+  padding: 0.65rem;
+  background-color: var(--light);
+  border: 1px solid var(--gray-200);
+  color: var(--dark);
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-xs);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  background-color: var(--gray-200);
+}
+
+/* Modales */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+}
+
+.modalCard {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-200);
+}
+
+.modalTitle {
+  font-size: var(--font-lg);
+  color: var(--dark);
+  margin-bottom: var(--spacing-md);
+  font-weight: var(--weight-bold);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
+  color: var(--gray-800);
+  text-transform: uppercase;
+}
+
+.select {
+  padding: 0.75rem var(--spacing-md);
+  font-size: var(--font-sm);
+  font-family: inherit;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--white);
+  outline: none;
+  cursor: pointer;
+}
+
+.input {
+  padding: 0.75rem var(--spacing-md);
+  font-size: var(--font-sm);
+  font-family: inherit;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--light);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  background-color: var(--white);
+}
+
+.modalCancelBtn {
+  flex: 1;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid var(--gray-200);
+  color: var(--gray-600);
+  font-weight: var(--weight-semibold);
+  font-family: inherit;
+  font-size: var(--font-xs);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+}
+
+.modalSubmitBtn {
+  flex: 1;
+  height: 44px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: var(--white);
+  border: none;
+  font-weight: var(--weight-bold);
+  font-family: inherit;
+  font-size: var(--font-xs);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .statsRow {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+}

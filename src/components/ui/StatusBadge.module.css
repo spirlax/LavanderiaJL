@@ -1,0 +1,86 @@
+/* src/components/ui/StatusBadge.module.css */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid transparent;
+  user-select: none;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--border-radius-full);
+  display: block;
+}
+
+/* Estados */
+.received {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-color: hsla(var(--primary-hue), 80%, 55%, 0.15);
+}
+.received .dot {
+  background-color: var(--primary);
+}
+
+.washing {
+  background-color: var(--warning-light);
+  color: var(--warning);
+  border-color: rgba(245, 158, 11, 0.15);
+}
+.washing .dot {
+  background-color: var(--warning);
+}
+
+.drying {
+  background-color: var(--warning-light);
+  color: var(--warning);
+  border-color: rgba(245, 158, 11, 0.15);
+}
+.drying .dot {
+  background-color: var(--warning);
+}
+
+.ironing {
+  background-color: var(--secondary-light);
+  color: var(--secondary);
+  border-color: hsla(var(--secondary-hue), 90%, 50%, 0.15);
+}
+.ironing .dot {
+  background-color: var(--secondary);
+}
+
+.ready {
+  background-color: var(--success-light);
+  color: var(--success);
+  border-color: rgba(20, 184, 166, 0.15);
+}
+.ready .dot {
+  background-color: var(--success);
+}
+
+.delivered {
+  background-color: var(--gray-100);
+  color: var(--gray-600);
+  border-color: var(--gray-200);
+}
+.delivered .dot {
+  background-color: var(--gray-400);
+}
+
+.cancelled {
+  background-color: var(--danger-light);
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.15);
+}
+.cancelled .dot {
+  background-color: var(--danger);
+}

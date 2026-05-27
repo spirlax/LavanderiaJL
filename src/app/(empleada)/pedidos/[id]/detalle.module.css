@@ -1,0 +1,199 @@
+/* src/app/(empleada)/pedidos/[id]/detalle.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-2xl);
+}
+
+.loading, .error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  font-weight: var(--weight-semibold);
+  color: var(--gray-600);
+  font-size: var(--font-md);
+}
+
+.headerArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-100);
+  padding-bottom: var(--spacing-sm);
+}
+
+.title {
+  font-size: var(--font-2xl);
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+
+.date {
+  font-size: var(--font-xs);
+  color: var(--gray-600);
+}
+
+.card {
+  padding: var(--spacing-md);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+}
+
+.labelTitle {
+  font-size: var(--font-xs);
+  color: var(--gray-600);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.customerName {
+  font-size: var(--font-md);
+  color: var(--dark);
+  font-weight: var(--weight-bold);
+  display: block;
+}
+
+.customerPhone {
+  font-size: var(--font-sm);
+  color: var(--primary);
+  display: block;
+  margin-top: 2px;
+}
+
+.itemsList {
+  background-color: var(--light);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.itemRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-sm);
+  color: var(--dark);
+}
+
+.notesText {
+  font-size: var(--font-sm);
+  color: var(--gray-800);
+  background-color: var(--warning-light);
+  border-left: 4px solid var(--warning);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-xs);
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--gray-100);
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.paymentStatus {
+  font-size: 0.72rem;
+  font-weight: var(--weight-bold);
+  color: var(--success);
+  display: block;
+  margin-top: 2px;
+}
+
+.grandTotal {
+  font-size: 1.55rem;
+  font-weight: var(--weight-bold);
+  color: var(--success);
+}
+
+.sectionTitle {
+  font-size: var(--font-md);
+  color: var(--gray-800);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Línea de tiempo */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  position: relative;
+  padding-left: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 3px;
+  width: 2px;
+  background-color: var(--gray-200);
+}
+
+.timelineItem {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  position: relative;
+}
+
+.timelineDot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: var(--border-radius-full);
+  position: absolute;
+  left: -16px;
+  top: 6px;
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.timelineMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineMeta strong {
+  font-size: var(--font-sm);
+  color: var(--dark);
+}
+
+.timelineMeta span {
+  font-size: var(--font-xs);
+  color: var(--gray-600);
+}
+
+/* Banners de estado finalizado */
+.completedBanner {
+  background-color: var(--success-light);
+  color: var(--success);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-sm);
+}
+
+.cancelledBanner {
+  background-color: var(--danger-light);
+  color: var(--danger);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-sm);
+}

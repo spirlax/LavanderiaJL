@@ -1,0 +1,197 @@
+/* src/app/(admin)/datos/datos.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.titleSection {
+  margin-bottom: var(--spacing-md);
+}
+
+.title {
+  font-size: var(--font-lg);
+  font-weight: var(--weight-bold);
+  color: var(--dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.description {
+  font-size: var(--font-sm);
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.selectorSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.label {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--gray-800);
+}
+
+.select {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--gray-300);
+  background-color: var(--white);
+  font-size: var(--font-sm);
+  color: var(--dark);
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.select:focus {
+  border-color: var(--primary);
+}
+
+.textarea {
+  width: 100%;
+  height: 200px;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--gray-300);
+  font-family: monospace;
+  font-size: var(--font-sm);
+  color: var(--dark);
+  resize: vertical;
+  outline: none;
+  transition: border-color 0.2s ease;
+  margin-bottom: var(--spacing-md);
+}
+
+.textarea:focus {
+  border-color: var(--primary);
+}
+
+.instructions {
+  background-color: var(--primary-light);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border-left: 4px solid var(--primary);
+}
+
+.instructions h4 {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-bold);
+  color: var(--primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.instructions ul {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-xs);
+  color: var(--gray-800);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: var(--white);
+  font-weight: var(--weight-semibold);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: var(--font-sm);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btnSecondary {
+  background-color: var(--white);
+  border: 1px solid var(--gray-300);
+  color: var(--dark);
+  font-weight: var(--weight-semibold);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: var(--font-sm);
+}
+
+.btnSecondary:hover {
+  background-color: var(--gray-100);
+}
+
+.alert {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.alertSuccess {
+  background-color: var(--success-light);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.alertError {
+  background-color: var(--warning-light);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+}
+
+.previewSection {
+  margin-top: var(--spacing-xl);
+}
+
+.previewTableContainer {
+  overflow-x: auto;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  margin-top: var(--spacing-md);
+}
+
+.previewTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--font-sm);
+}
+
+.previewTable th {
+  background-color: var(--gray-100);
+  padding: var(--spacing-md);
+  font-weight: var(--weight-bold);
+  color: var(--gray-800);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.previewTable td {
+  padding: var(--spacing-md);
+  border-bottom: 1px solid var(--gray-200);
+  color: var(--dark);
+}
+
+.previewTable tr:last-child td {
+  border-bottom: none;
+}

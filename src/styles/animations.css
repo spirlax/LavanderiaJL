@@ -1,0 +1,79 @@
+/* src/styles/animations.css */
+
+/* Micro-animaciones y efectos dinámicos premium */
+
+/* Transición por defecto para interactivos */
+.transition-all {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efecto hover suave de elevación y luz */
+@media (hover: hover) {
+  .hover-premium:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+    filter: brightness(1.05);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Efecto al presionar (Active) ideal para celular - retroalimentación física táctil */
+.active-press:active {
+  transform: scale(0.96);
+  filter: brightness(0.92);
+}
+
+/* Animación de entrada suave hacia arriba (Fade In Up) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Animación de pulso suave para elementos cargando o listos */
+@keyframes softPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 hsla(var(--primary-hue), 80%, 55%, 0.4);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px hsla(var(--primary-hue), 80%, 55%, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 hsla(var(--primary-hue), 80%, 55%, 0);
+  }
+}
+
+.animate-pulse-soft {
+  animation: softPulse 2s infinite ease-in-out;
+}
+
+/* Skeleton Loading Shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, var(--gray-100) 25%, var(--gray-200) 37%, var(--gray-100) 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}

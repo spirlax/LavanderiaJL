@@ -1,0 +1,134 @@
+/* src/components/ui/BigButton.module.css */
+
+.bigBtn {
+  width: 100%;
+  height: var(--tap-size); /* 56px de alto obligatorio para móviles */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  font-family: inherit;
+  font-size: var(--font-md);
+  font-weight: var(--weight-bold);
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.label {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.icon {
+  font-size: 1.35rem;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--danger);
+  color: var(--white);
+  font-size: 0.65rem;
+  font-weight: var(--weight-bold);
+  padding: 2px 6px;
+  border-radius: var(--border-radius-full);
+  box-shadow: var(--shadow-sm);
+  border: 2px solid var(--white);
+}
+
+/* Variantes */
+.primary {
+  background-color: var(--white);
+  border-color: var(--gray-200);
+  color: var(--dark);
+}
+
+.primary.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  border-color: transparent;
+  color: var(--white);
+  box-shadow: 0 4px 15px var(--primary-glow);
+}
+
+.secondary {
+  background-color: var(--white);
+  border-color: var(--gray-200);
+  color: var(--dark);
+}
+
+.secondary.active {
+  background: linear-gradient(135deg, var(--secondary), var(--secondary-hover));
+  border-color: transparent;
+  color: var(--white);
+}
+
+.success {
+  background-color: var(--white);
+  border-color: var(--gray-200);
+  color: var(--dark);
+}
+
+.success.active {
+  background-color: var(--success);
+  border-color: transparent;
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.2);
+}
+
+.warning {
+  background-color: var(--white);
+  border-color: var(--gray-200);
+  color: var(--dark);
+}
+
+.warning.active {
+  background-color: var(--warning);
+  border-color: transparent;
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+}
+
+.danger {
+  background-color: var(--white);
+  border-color: var(--gray-200);
+  color: var(--dark);
+}
+
+.danger.active {
+  background-color: var(--danger);
+  border-color: transparent;
+  color: var(--white);
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+}
+
+.outline {
+  background-color: transparent;
+  border-color: var(--gray-200);
+  color: var(--gray-800);
+  box-shadow: none;
+}
+
+.outline.active {
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: var(--primary-light);
+}
+
+/* Deshabilitado */
+.bigBtn:disabled {
+  background-color: var(--gray-100) !important;
+  color: var(--gray-400) !important;
+  border-color: transparent !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}

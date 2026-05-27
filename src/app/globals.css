@@ -1,0 +1,5 @@
+/* Importación del sistema de diseño Vanilla CSS */
+@import '../styles/tokens.css';
+@import '../styles/animations.css';
+@import '../styles/globals.css';
+

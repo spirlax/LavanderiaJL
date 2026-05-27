@@ -1,0 +1,106 @@
+/* src/app/(auth)/login/login.module.css */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--spacing-lg);
+  background: radial-gradient(circle at 10% 20%, hsl(var(--primary-hue), 80%, 96%) 0%, hsl(var(--secondary-hue), 90%, 96%) 90%);
+}
+
+.card {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--white);
+  border: 1px solid var(--gray-200);
+}
+
+.logoSection {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.logoPlaceholder {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--border-radius-md);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  font-size: var(--font-3xl);
+  font-weight: var(--weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.title {
+  font-size: var(--font-2xl);
+  color: var(--dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+  font-size: var(--font-sm);
+  color: var(--gray-600);
+  margin-bottom: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.label {
+  font-size: var(--font-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--gray-800);
+}
+
+.input {
+  width: 100%;
+  padding: 0.875rem var(--spacing-md);
+  font-size: var(--font-md);
+  font-family: inherit;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--light);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--primary);
+  background-color: var(--white);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.button {
+  width: 100%;
+  height: var(--tap-size);
+  background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+  color: var(--white);
+  font-size: var(--font-md);
+  font-weight: var(--weight-semibold);
+  border: none;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--spacing-sm);
+}
+
+.button:hover {
+  background: linear-gradient(135deg, var(--primary-hover), var(--primary-active));
+  box-shadow: var(--shadow-lg);
+}
