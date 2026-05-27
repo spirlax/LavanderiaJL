@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/layout/Header';
-import styles from '@/app/(admin)/clientes/clientes.module.css';
+import styles from '@/app/(admin)/admin/clientes/clientes.module.css';
 
 interface Customer {
   id: string;

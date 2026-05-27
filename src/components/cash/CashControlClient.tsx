@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Header } from '@/components/layout/Header';
 import { closeDailyCash } from '@/lib/actions/cash-actions';
-import styles from '@/app/(admin)/caja/caja.module.css';
+import styles from '@/app/(admin)/admin/caja/caja.module.css';
 
 interface CashierSummary {
   employee_id: string;
