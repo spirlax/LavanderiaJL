@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  padding-bottom: 160px; /* Evita que el footer flote encima de los campos */
+  padding-bottom: var(--spacing-xl);
 }
 
 .title {
@@ -239,22 +239,17 @@
   color: var(--secondary);
 }
 
-/* Footer Fijo Resumen */
+/* Resumen Inline al final del formulario (sin posición fija, evita solapamiento en móvil) */
 .footerSummary {
-  position: fixed;
-  bottom: calc(var(--tap-size) + var(--spacing-xs) + var(--safe-area-inset-bottom));
-  left: 0;
-  right: 0;
-  max-width: 480px;
-  margin: 0 auto;
-  background-color: hsla(0, 0%, 100%, 0.95);
-  border-top: 1px solid var(--gray-200);
-  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, hsla(160, 60%, 96%, 1), hsla(175, 60%, 96%, 1));
+  border: 2px solid var(--success);
+  border-radius: var(--border-radius-md);
   padding: var(--spacing-md);
-  z-index: 90;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  box-shadow: 0 4px 20px rgba(20, 184, 166, 0.15);
+  margin-top: var(--spacing-xs);
 }
 
 .summaryTotals {

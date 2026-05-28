@@ -401,6 +401,10 @@ export default function NuevoOrderClient({ initialServices }: NuevoOrderClientPr
               </div>
             </div>
           )}
+
+          <p style={{ fontSize: 'var(--font-xs)', color: 'var(--gray-600)', marginTop: 'var(--spacing-sm)', padding: '8px 12px', backgroundColor: 'var(--light)', borderRadius: 'var(--border-radius-xs)', borderLeft: '3px solid var(--primary)' }}>
+            💡 Para agregar o editar artículos especiales, el dueño debe ir a <strong>Panel Admin → Configuración → Tarifario</strong>.
+          </p>
         </div>
       </section>
 
@@ -475,32 +479,43 @@ export default function NuevoOrderClient({ initialServices }: NuevoOrderClientPr
         </div>
       </section>
 
-      {/* RESUMEN FINAL Y BOTÓN DE REGISTRO CONDICIONAL (OCULTO SI NO HAY MONTO O CLIENTE) */}
-      {selectedCustomer && totalAmount > 0 && (
-        <div className={`${styles.footerSummary} glassmorphism animate-fade-in-up`}>
-          <div className={styles.summaryTotals}>
-            <div>
-              <span style={{ fontSize: 'var(--font-xs)', color: 'var(--gray-600)', display: 'block' }}>Total a Cobrar</span>
-              <strong className={styles.grandTotal}>S/ {totalAmount.toFixed(2)}</strong>
-            </div>
-            <div style={{ textAlign: 'right' }}>
-              <span style={{ fontSize: 'var(--font-xs)', color: 'var(--gray-600)', display: 'block' }}>Método</span>
-              <span className={styles.summaryPaymentLabel}>
-                {paymentMethod === 'cash' ? '💵 EFECTIVO' : paymentMethod === 'yape' ? '📱 YAPE' : '🎯 PLIN'}
-              </span>
-            </div>
+      {/* RESUMEN FINAL + BOTÓN DE REGISTRO - Siempre visible, botón se activa según condiciones */}
+      <div className={`${styles.footerSummary} animate-fade-in-up`}>
+        <div className={styles.summaryTotals}>
+          <div>
+            <span style={{ fontSize: 'var(--font-xs)', color: 'var(--gray-600)', display: 'block' }}>Total a Cobrar</span>
+            <strong className={styles.grandTotal}>
+              {totalAmount > 0 ? `S/ ${totalAmount.toFixed(2)}` : 'S/ ---'}
+            </strong>
           </div>
-
-          <button
-            type="button"
-            onClick={handleRegisterOrder}
-            disabled={isSubmitting || !selectedCustomer || totalAmount <= 0}
-            className={`${styles.submitOrderBtn} active-press transition-all`}
-          >
-            {isSubmitting ? 'Registrando Pedido...' : '💰 CONFIRMAR Y REGISTRAR COBRO'}
-          </button>
+          <div style={{ textAlign: 'right' }}>
+            <span style={{ fontSize: 'var(--font-xs)', color: 'var(--gray-600)', display: 'block' }}>Método</span>
+            <span className={styles.summaryPaymentLabel}>
+              {paymentMethod === 'cash' ? '💵 EFECTIVO' : paymentMethod === 'yape' ? '📱 YAPE' : '🎯 PLIN'}
+            </span>
+          </div>
         </div>
-      )}
+
+        {!selectedCustomer && (
+          <p style={{ fontSize: 'var(--font-xs)', color: 'var(--gray-600)', textAlign: 'center', margin: 0 }}>
+            ⚠️ Selecciona o registra un cliente para continuar
+          </p>
+        )}
+        {selectedCustomer && totalAmount <= 0 && (
+          <p style={{ fontSize: 'var(--font-xs)', color: 'var(--gray-600)', textAlign: 'center', margin: 0 }}>
+            ⚠️ Ingresa un peso o selecciona un artículo especial
+          </p>
+        )}
+
+        <button
+          type="button"
+          onClick={handleRegisterOrder}
+          disabled={isSubmitting || !selectedCustomer || totalAmount <= 0}
+          className={`${styles.submitOrderBtn} active-press transition-all`}
+        >
+          {isSubmitting ? 'Registrando Pedido...' : '💰 CONFIRMAR Y REGISTRAR COBRO'}
+        </button>
+      </div>
 
       {/* MODAL REGISTRO RÁPIDO DE CLIENTE */}
       {showNewCustomerModal && (

@@ -150,6 +150,12 @@ export default function AdminDashboard() {
         {/* Acciones del Administrador */}
         <section className="glassmorphism" style={{ padding: 'var(--spacing-xl)', borderRadius: 'var(--border-radius-md)', display: 'flex', flexDirection: 'column', gap: 'var(--spacing-md)' }}>
           <h3 style={{ fontSize: 'var(--font-lg)', marginBottom: 'var(--spacing-xs)' }}>⚡ Acciones Rápidas</h3>
+          <Link href="/admin/configuracion" style={{ textDecoration: 'none', display: 'block' }}>
+            <button className="active-press transition-all" style={{ width: '100%', padding: 'var(--spacing-md)', borderRadius: 'var(--border-radius-sm)', background: 'linear-gradient(135deg, hsl(35, 90%, 50%), hsl(28, 90%, 45%))', color: 'var(--white)', fontWeight: 'var(--weight-bold)', border: 'none', textAlign: 'left', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxShadow: '0 4px 12px rgba(240, 140, 0, 0.25)' }}>
+              <span>🛌 Gestionar Artículos Especiales</span>
+              <span>➔</span>
+            </button>
+          </Link>
           <Link href="/admin/datos" style={{ textDecoration: 'none', display: 'block' }}>
             <button className="active-press transition-all" style={{ width: '100%', padding: 'var(--spacing-md)', borderRadius: 'var(--border-radius-sm)', background: 'linear-gradient(135deg, var(--primary), var(--primary-hover))', color: 'var(--white)', fontWeight: 'var(--weight-semibold)', border: 'none', textAlign: 'left', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <span>📥 Cargar Excel Histórico</span>
