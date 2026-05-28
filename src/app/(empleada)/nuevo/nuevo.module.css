@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  padding-bottom: 80px; /* Evita que el footer flote encima de los campos */
+  padding-bottom: 160px; /* Evita que el footer flote encima de los campos */
 }
 
 .title {
